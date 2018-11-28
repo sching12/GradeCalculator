@@ -1,0 +1,91 @@
+
+<html>
+	<head>
+		<title> Final Grade Calculator </title>
+		<script language = "Javascript">
+			function Average(mid,final,project)
+			{
+				ave = (mid+final+project);
+				return(ave);
+			}
+			function Averages (asg1,asg2,asg3,asg4)
+			{
+				aveasg = (asg1+asg2+asg3+asg4);
+				return(aveasg);
+			}	
+
+			var studname = prompt ("Enter Student Name:","");
+    			var gr_asg1 = parseInt (prompt ("Enter grade for Assignment 1:"," "));
+    			var gr_asg2 = parseInt (prompt ("Enter grade for Assignment 2:"," "));
+    			var gr_asg3 = parseInt (prompt ("Enter grade for Assignment 3:"," "));
+    			var gr_asg4 = parseInt (prompt ("Enter grade for Assignment 4:"," "));
+    			var gr_mid = parseInt (prompt ("Enter for Midterm:"," "));
+			var gr_final = parseInt (prompt ("Enter for Final Exam:"," "));	
+    			var gr_project = parseInt (prompt ("Enter for Final Project:"," "));
+			var ave=Average(gr_mid,gr_final,gr_project);
+
+			var aveasg =Averages (gr_asg1,gr_asg2,gr_asg3,gr_asg4);    
+							
+			var grade = (ave + aveasg)/4
+
+			document.write ("<center><h1> Final Grade Calculator </h1><hr width='75%' size='3'>");
+    			document.write ("<table><tr><td>Student Name:<td><b>",studname,"</b>");
+    			
+    			document.write ("<tr><td><br><td> Assignment 1:<td>",gr_asg1);
+    			document.write ("<tr><td><br><td> Assignment 2:<td>",gr_asg2);
+    			document.write ("<tr><td><br><td> Assignment 3:<td>",gr_asg3);
+    			document.write ("<tr><td><br><td> Assignment 4:<td>",gr_asg4);
+    			document.write ("<tr><td><br><td> Midterm:<td>",gr_mid);
+			document.write ("<tr><td><br><td> Final Exam:<td>",gr_final);
+			document.write ("<tr><td><br><td> Final Project:<td>",gr_project);
+    			document.write ("<tr><td>Average Grade:<td><b><p>", (ave + aveasg)/4, "</b>");
+				
+			if (grade >=94) {
+				grade = 'A';
+			}
+				
+			else if (grade >=90) {
+				grade = 'A-';
+			}
+			else if (grade >=87) {
+				grade = 'B+';
+			}
+			else if (grade >=84) {
+				grade = 'B';
+			}
+			else if (grade >=80) {
+				grade = 'B-';
+			}
+			else if (grade >=77) {
+				grade = 'C+';
+			}
+			else if (grade >=74) {
+				grade = 'C';
+			}
+			else if (grade >=70) {
+				grade = 'C-';
+			}
+			else if (grade >=67) {
+				grade = 'D+';
+			}
+			else if (grade >=64) {
+				grade = 'D';
+			}
+			else if (grade >=60) {
+				grade = 'D-';
+			}
+
+			else  {
+				grade = 'F';
+			}
+
+			document.write ("<tr><td>Letter Grade:<td><b> ",grade,"</b></table><hr width=75% size=3>"); 
+
+		
+
+		</script>
+	</head>
+</body>
+</html>
+
+</html>
